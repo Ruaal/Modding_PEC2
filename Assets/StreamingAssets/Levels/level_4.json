@@ -1,0 +1,312 @@
+{
+    "Items": [
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": -5,
+                "y": 4
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": -5,
+                "y": 3
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": -5,
+                "y": 2
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": -5,
+                "y": 1
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": -5,
+                "y": 0
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": -4,
+                "y": 0
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": -3,
+                "y": 0
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": -2,
+                "y": 0
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": -5,
+                "y": 5
+            }
+        },
+        {
+            "prefabName": "Player(Clone)",
+            "position": {
+                "x": -4,
+                "y": 1
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": -1,
+                "y": 0
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": 1,
+                "y": 0
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": 2,
+                "y": 0
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": -5,
+                "y": 6
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": -5,
+                "y": 7
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": -5,
+                "y": 8
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": -4,
+                "y": 8
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": -3,
+                "y": 8
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": -2,
+                "y": 8
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": -1,
+                "y": 8
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": 0,
+                "y": 8
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": 1,
+                "y": 8
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": 2,
+                "y": 8
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": 3,
+                "y": 8
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": 4,
+                "y": 8
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": 4,
+                "y": 7
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": 4,
+                "y": 6
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": 4,
+                "y": 5
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": 4,
+                "y": 4
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": 4,
+                "y": 3
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": 4,
+                "y": 2
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": 4,
+                "y": 1
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": 4,
+                "y": 0
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": 3,
+                "y": 0
+            }
+        },
+        {
+            "prefabName": "Goal(Clone)",
+            "position": {
+                "x": 3,
+                "y": 5
+            }
+        },
+        {
+            "prefabName": "Goal(Clone)",
+            "position": {
+                "x": 3,
+                "y": 4
+            }
+        },
+        {
+            "prefabName": "Box(Clone)",
+            "position": {
+                "x": -2,
+                "y": 3
+            }
+        },
+        {
+            "prefabName": "Box(Clone)",
+            "position": {
+                "x": -3,
+                "y": 6
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": 0,
+                "y": 5
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": 0,
+                "y": 4
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": 0,
+                "y": 3
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": 1,
+                "y": 3
+            }
+        },
+        {
+            "prefabName": "Wall(Clone)",
+            "position": {
+                "x": 2,
+                "y": 3
+            }
+        }
+    ]
+}

@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GoalController : MonoBehaviour
@@ -8,25 +6,27 @@ public class GoalController : MonoBehaviour
     public static event Action<GoalController> OnBoxEnterGoal;
     public static event Action<GoalController> OnBoxExitGoal;
 
+    private int boxLayer;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        boxLayer = LayerMask.NameToLayer("Box");
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Box entered goal");
+        Debug.Log("Object entered goal");
 
-        if (other.gameObject.CompareTag("Box"))
+        if (other.gameObject.layer == boxLayer)
         {
             Debug.Log("Box entered goal");
-            // Si es una caja, emite el evento
             OnBoxEnterGoal?.Invoke(this);
         }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Box"))
+        if (other.gameObject.layer == boxLayer)
         {
-            // Si es una caja, emite el evento
             OnBoxExitGoal?.Invoke(this);
         }
     }

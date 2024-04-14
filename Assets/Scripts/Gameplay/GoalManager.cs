@@ -1,9 +1,13 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GoalManager : MonoBehaviour
 {
     private List<GoalController> goalsInTrigger = new List<GoalController>();
+    public static event Action OnWin;
+
 
     void Start()
     {
@@ -38,7 +42,14 @@ public class GoalManager : MonoBehaviour
     {
         if (goalsInTrigger.Count == FindObjectsOfType<GoalController>().Length)
         {
-            Debug.Log("You Win");
+            StartCoroutine(WaitAndInvokeWin());
         }
+    }
+
+    private IEnumerator WaitAndInvokeWin()
+    {
+        Debug.Log("Win");
+        yield return new WaitForSeconds(0.5f);
+        OnWin?.Invoke();
     }
 }
