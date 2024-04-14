@@ -1,0 +1,1 @@
+JSON Helper conseguido del siguiente enlace: httpsstackoverflow.comquestions36239705serialize-and-deserialize-json-and-json-array-in-unity
