@@ -5,20 +5,36 @@ using UnityEngine;
 public class BoxController : MonoBehaviour
 {
     private bool isMoving = false;
+    private LayerMask layerMask;
 
-    public void Move(Vector2 moveDirection)
+    private void Start()
     {
-        // Calculamos la posición a la que se quiere mover la caja
-        Vector2 targetPos = new Vector2(transform.position.x, transform.position.y) + moveDirection;
+        layerMask = LayerMask.GetMask("Box", "Wall");
+    }
+    public bool Move(Vector2 moveDirection)
+    {
+        // Almacena la capa original del objeto
+        int originalLayer = gameObject.layer;
+
+        // Cambia la capa del objeto a una que no sea detectada por el Raycast
+        gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
 
         // Comprobamos si la nueva posición está vacía
-        Collider2D hit = Physics2D.OverlapCircle(targetPos, 0.1f, LayerMask.GetMask("Box") | LayerMask.GetMask("Wall"));
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, moveDirection, 1, layerMask);
 
-        if (hit == null)
+        // Restaura la capa original del objeto
+        gameObject.layer = originalLayer;
+
+        if (hit.collider != null)
         {
-            // Si está vacía, movemos la caja
-            StartCoroutine(MoveBox(moveDirection));
+            if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Wall") || hit.collider.gameObject.layer == LayerMask.NameToLayer("Box"))
+            {
+                return false;
+            }
         }
+
+        StartCoroutine(MoveBox(moveDirection));
+        return true;
     }
 
     IEnumerator MoveBox(Vector2 moveDirection)

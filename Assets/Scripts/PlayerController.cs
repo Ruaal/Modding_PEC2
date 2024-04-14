@@ -5,6 +5,12 @@ public class PlayerController : MonoBehaviour
 {
     private Vector2 moveInput;
     private bool isMoving = false;
+    private LayerMask layerMask;
+
+    private void Start()
+    {
+        layerMask = LayerMask.GetMask("Box", "Wall");
+    }
 
     void Update()
     {
@@ -15,14 +21,25 @@ public class PlayerController : MonoBehaviour
         moveInput.Normalize();
 
         // Movemos al jugador
-        if (!isMoving)
+        if (!isMoving && moveInput != Vector2.zero)
         {
-            StartCoroutine(MovePlayer(moveInput));
-        }
-        Collider2D hit = Physics2D.OverlapCircle(transform.position, 0.4f, LayerMask.GetMask("Box"));
-        if (hit != null)
-        {
-            hit.gameObject.GetComponent<BoxController>().Move(moveInput);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, moveInput, 1, layerMask);
+            if (hit.collider == null)
+            {
+                StartCoroutine(MovePlayer(moveInput));
+            }
+            else if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Wall"))
+            {
+                return;
+            }
+            else if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Box"))
+            {
+                bool canMove = hit.collider.gameObject.GetComponent<BoxController>().Move(moveInput);
+                if (canMove)
+                {
+                    StartCoroutine(MovePlayer(moveInput));
+                }
+            }
         }
 
     }
